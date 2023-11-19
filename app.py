@@ -90,7 +90,7 @@ def render_with_sidebar(md_files):
 
 
 # 读取 Markdown 文件列表
-md_files = list_md_files(".")
+md_files = list_md_files("./markdown")
 
 # 显示主界面
 render_with_sidebar(md_files)
