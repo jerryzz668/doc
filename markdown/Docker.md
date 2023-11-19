@@ -1,9 +1,6 @@
-# docker_reference
-
-官方文档：
 
 # 一、Introduction
-
+官方文档：
 image:镜像就是个包，是个死的东西。相当于python包。
 
 container:把image启动了你就获得了一个独立的容器, 进入这个启动的容器就相当于一个conda 环境了。
@@ -28,9 +25,9 @@ VERSION_CODENAME=bionic
 UBUNTU_CODENAME=bionic
 ```
 
-## 2. ubuntu[安装教程](https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine)
+## 2. ubuntu安装教程
 
-1. 根据官方教程前进
+1. 根据[安装教程](https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine)前进
 
 ```
 $ sudo apt-get update

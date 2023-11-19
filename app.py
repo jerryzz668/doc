@@ -12,7 +12,12 @@ def read_markdown_file(file_path):
     return content
 
 def list_md_files(directory):
-    return [file for file in os.listdir(directory) if file.endswith(".md")]
+    file_path_list = []
+    for file in os.listdir(directory):
+        md_file_path = os.path.join(directory, file)
+        if file.endswith('.md'):
+            file_path_list.append(md_file_path)
+    return file_path_list
 
 def extract_titles(markdown_content):
     lines = markdown_content.split('\n')
@@ -74,9 +79,9 @@ def create_sidebar(titles):
         """, unsafe_allow_html=True)
 
 def render_with_sidebar(md_files):
-    selected_file = st.sidebar.radio("Select a file", md_files)
+    selected_file = st.sidebar.radio("Select a file", [os.path.basename(file).split('.')[0] for file in md_files])
 
-    file_path = f"./{selected_file}"
+    file_path = f"markdown/{selected_file}.md"
     content = read_markdown_file(file_path)
 
     # 获取标题
@@ -90,7 +95,7 @@ def render_with_sidebar(md_files):
 
 
 # 读取 Markdown 文件列表
-md_files = list_md_files("./markdown")
+md_files = list_md_files("markdown")
 
 # 显示主界面
 render_with_sidebar(md_files)
