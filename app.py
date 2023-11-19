@@ -1,7 +1,6 @@
 import streamlit as st
 import os
-# import re
-# import regex
+import re
 import xxhash
 
 # 设置页面为 wide mode
@@ -46,7 +45,6 @@ def create_anchor_from_text(text):
     if is_ascii:
         # If the text is valid ASCII characters
         new_anchor = '-'.join(re.findall(r'\w+', text.lower()))
-        # new_anchor = '-'.join(filter(None, regex.split(r'[^\p{L}\p{N}]+', text.lower())))
     elif text:
         # If the text is not valid ASCII, use a hash of the text
         new_anchor = format(xxhash.xxh32(text, seed=0xabcd).intdigest(), 'x')
