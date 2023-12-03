@@ -2,7 +2,7 @@
 
 0是黑,255是白
 
-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
+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
 
 ilog-ecnu:    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
 
@@ -30,8 +30,9 @@ find . -name "*.py" | xargs grep "demo"
 
 $ docker export 3fdd28cd1201 > yolox_demo.tar  # 将容器导出为image
 $ docker import yolox_demo.tar  yolox_demo:v2  # 将image导入
-```
 
-多步前端地址：http://81.68.180.53:9527
+git config --global credential.helper store  # git push 免密
+git clone https://github.com/jerryzz668/single-step.git single1  # single1表示clone下来改名
+```
 
 pick-colour-picker  颜色提取器
