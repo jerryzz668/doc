@@ -218,12 +218,14 @@ hello-world            latest                          d1165f221234   3 months a
 nvidia/cuda            11.0-cudnn8-devel-ubuntu16.04   a42cfaadafba   5 months ago     7.72GB
 ```
 
-## 2. docker stop/rm
+## 2. docker stop/rm/logs/restart
 
 ```bash
 docker stop 容器id    # 停止当前正在运行的容器
 docker rm 容器id      # 删除容器
 docker rmi 镜像id     # 删除镜像
+docker logs 容器id    # 查看容器启动log
+docker restart 容器id # 重启容器
 ```
 
 ## 3. docker push
